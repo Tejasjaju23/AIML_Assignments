@@ -1,0 +1,118 @@
+================================================================================
+AIML PRACTICAL ASSIGNMENT 4 - CLASSIFICATION MODELS EVALUATION REPORT
+================================================================================
+STUDENT DETAILS:
+Name: Tejas Gopal Jaju
+PRN: 202401040124
+Roll Number: 29
+Batch: A2
+Subject: Artificial Intelligence and Machine Learning
+Practical Assignment: 4
+Title: Classification Models
+--------------------------------------------------------------------------------
+
+OVERALL COMPARISON TABLE:
+             Algorithm  Accuracy  Precision  Recall  F1-Score  Log Loss
+Support Vector Machine    0.9825     0.9825  0.9825    0.9825    0.0860
+         Decision Tree    0.9123     0.9161  0.9123    0.9130    3.1617
+   K-Nearest Neighbors    0.9561     0.9561  0.9561    0.9560    0.4073
+           Naïve Bayes    0.9386     0.9384  0.9386    0.9384    0.3713
+
+================================================================================
+
+MODEL: SUPPORT VECTOR MACHINE
+Training Accuracy : 0.9824
+Testing Accuracy  : 0.9825
+Precision (weight): 0.9825
+Recall (weighted) : 0.9825
+F1-Score (weight) : 0.9825
+Log Loss          : 0.0860
+
+Confusion Matrix:
+[[41  1]
+ [ 1 71]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   malignant       0.98      0.98      0.98        42
+      benign       0.99      0.99      0.99        72
+
+    accuracy                           0.98       114
+   macro avg       0.98      0.98      0.98       114
+weighted avg       0.98      0.98      0.98       114
+
+--------------------------------------------------------------------------------
+
+MODEL: DECISION TREE
+Training Accuracy : 1.0000
+Testing Accuracy  : 0.9123
+Precision (weight): 0.9161
+Recall (weighted) : 0.9123
+F1-Score (weight) : 0.9130
+Log Loss          : 3.1617
+
+Confusion Matrix:
+[[39  3]
+ [ 7 65]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   malignant       0.85      0.93      0.89        42
+      benign       0.96      0.90      0.93        72
+
+    accuracy                           0.91       114
+   macro avg       0.90      0.92      0.91       114
+weighted avg       0.92      0.91      0.91       114
+
+--------------------------------------------------------------------------------
+
+MODEL: K-NEAREST NEIGHBORS
+Training Accuracy : 0.9736
+Testing Accuracy  : 0.9561
+Precision (weight): 0.9561
+Recall (weighted) : 0.9561
+F1-Score (weight) : 0.9560
+Log Loss          : 0.4073
+
+Confusion Matrix:
+[[39  3]
+ [ 2 70]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   malignant       0.95      0.93      0.94        42
+      benign       0.96      0.97      0.97        72
+
+    accuracy                           0.96       114
+   macro avg       0.96      0.95      0.95       114
+weighted avg       0.96      0.96      0.96       114
+
+--------------------------------------------------------------------------------
+
+MODEL: NAÏVE BAYES
+Training Accuracy : 0.9407
+Testing Accuracy  : 0.9386
+Precision (weight): 0.9384
+Recall (weighted) : 0.9386
+F1-Score (weight) : 0.9384
+Log Loss          : 0.3713
+
+Confusion Matrix:
+[[38  4]
+ [ 3 69]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   malignant       0.93      0.90      0.92        42
+      benign       0.95      0.96      0.95        72
+
+    accuracy                           0.94       114
+   macro avg       0.94      0.93      0.93       114
+weighted avg       0.94      0.94      0.94       114
+
+--------------------------------------------------------------------------------
+
