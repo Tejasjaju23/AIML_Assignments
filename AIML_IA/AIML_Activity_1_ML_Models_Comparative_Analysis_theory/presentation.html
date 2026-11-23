@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2: Machine Learning Models Comparative Analysis Presentation</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #10b981;
+            --danger: #f43f5e;
+            --border: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 650px;
+        }
+        .slide-header {
+            background: #111827;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .header-title { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+        .header-badge {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .slide-content {
+            padding: 40px;
+            flex-grow: 1;
+            display: none;
+            overflow-y: auto;
+        }
+        .slide-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        h1 { font-size: 2.2rem; color: #ffffff; margin-bottom: 12px; }
+        h2 { font-size: 1.6rem; color: var(--primary); margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+        h3 { font-size: 1.2rem; color: #34d399; margin: 16px 0 8px 0; }
+        p, li { font-size: 1.05rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 10px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 0.8rem; font-weight: bold; }
+        .badge-success { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .card {
+            background: #0f172a;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .card-title { font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th { background: #1e293b; color: var(--primary); font-weight: 600; }
+        tr:hover { background: rgba(255, 255, 255, 0.03); }
+        .highlight { color: #38bdf8; font-weight: bold; }
+        .slide-footer {
+            background: #111827;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border);
+        }
+        .nav-btn {
+            background: #0284c7;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover { background: #0369a1; }
+        .nav-btn:disabled { background: #475569; cursor: not-allowed; opacity: 0.6; }
+        .slide-counter { color: var(--text-muted); font-size: 0.95rem; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    <div class="slide-header">
+        <div class="header-title">MIT ACADEMY OF ENGINEERING | AI & MACHINE LEARNING (2304322T)</div>
+        <div class="header-badge">Activity No. 2 Presentation</div>
+    </div>
+
+    <!-- Slide 1: Title -->
+    <div class="slide-content active" id="slide-1">
+        <div style="text-align: center; margin-top: 30px;">
+            <span class="badge badge-success" style="font-size: 1rem; padding: 6px 16px; margin-bottom: 16px;">TY B.Tech Semester V | Academic Year 2026-2027</span>
+            <h1 style="font-size: 2.4rem; margin-top: 12px; color: #38bdf8;">CardioGuard AI</h1>
+            <p style="font-size: 1.3rem; color: #94a3b8; max-width: 800px; margin: 0 auto 30px auto;">
+                Implementation and Performance Evaluation with Comparative Analysis of Machine Learning Models for Selected Real-Time Applications
+            </p>
+            <div class="grid-3" style="max-width: 850px; margin: 30px auto 0 auto; text-align: left;">
+                <div class="card">
+                    <div class="card-title">👨‍🎓 Candidate</div>
+                    <p style="margin: 0; font-weight: 600;">Tejas / Candidate</p>
+                    <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Seat: TY-BTECH-V-01</p>
+                    <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">PRN: 202401040128</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">📚 Course Details</div>
+                    <p style="margin: 0; font-weight: 600;">AI & Machine Learning</p>
+                    <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Course Code: 2304322T</p>
+                    <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">CO1 | PO1, PO2, PO3, PO5, PO8, PO10, PO12</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">🏫 Department</div>
+                    <p style="margin: 0; font-weight: 600;">Computer Engineering</p>
+                    <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">MIT Academy of Engineering</p>
+                    <p style="margin: 0; color: #94a3b8; font-size: 0.9rem;">Alandi (D), Pune - 412105</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Course Assessment Rubrics Compliance -->
+    <div class="slide-content" id="slide-2">
+        <h2>Course Assessment Rubrics Compliance Matrix (CO1)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Evaluation Rubric Dimension</th>
+                    <th>POs</th>
+                    <th>Target Band (Max 2.5 pts)</th>
+                    <th>Score</th>
+                    <th>Project Implementation Evidence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: rgba(56, 189, 248, 0.08);">
+                    <td><strong>1. Knowledge & Problem Analysis</strong></td>
+                    <td>PO1, PO2</td>
+                    <td>Excellent understanding and precise analysis</td>
+                    <td class="highlight">2.5 / 2.5</td>
+                    <td>Clinical loss asymmetry formulation (Recall prioritization); full mathematical derivations for 8 ML paradigms.</td>
+                </tr>
+                <tr style="background: rgba(16, 185, 129, 0.08);">
+                    <td><strong>2. Modern Tools & Code Elegance</strong></td>
+                    <td>PO3, PO5</td>
+                    <td>Excellent design, correct & efficient clean output</td>
+                    <td class="highlight">2.5 / 2.5</td>
+                    <td>Python 3.12, Scikit-Learn 1.8, zero-leakage standard scaling, 99th% Winsorization, 5-Fold Stratified CV, 10 figures.</td>
+                </tr>
+                <tr style="background: rgba(56, 189, 248, 0.08);">
+                    <td><strong>3. Creativity & Demonstration</strong></td>
+                    <td>PO8, PO10</td>
+                    <td>Highly creative, fully original work</td>
+                    <td class="highlight">2.5 / 2.5</td>
+                    <td>CardioGuard AI Streamlit CDSS web app, live 8-model switcher, radar analysis, interactive HTML slides.</td>
+                </tr>
+                <tr style="background: rgba(16, 185, 129, 0.08);">
+                    <td><strong>4. AI Trends & Oral Presentation</strong></td>
+                    <td>PO12</td>
+                    <td>Strong AI trends understanding, answered all Qs</td>
+                    <td class="highlight">2.5 / 2.5</td>
+                    <td>Explainable AI (Gini/SHAP), continuous Data Drift (Evidently AI/PSI), gender fairness auditing, 12-Q viva guide.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card" style="margin-top: 15px; text-align: center;">
+            <p style="margin: 0; color: #38bdf8; font-weight: bold; font-size: 1.1rem;">
+                Total Score Target: 10.0 / 10.0 Points (Highest Criteria Band Across All 4 Dimensions)
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Abstract & Problem Domain -->
+    <div class="slide-content" id="slide-3">
+        <h2>Executive Abstract & Real-Time Application</h2>
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">🏥 Clinical Real-Time Application</div>
+                <p>Cardiovascular disease (CVD) is the leading cause of global mortality (~17.9M annual deaths). Early risk stratification is crucial to prevent acute myocardial infarction.</p>
+                <p><strong>Goal:</strong> Deploy an automated, real-time Clinical Decision Support System (CDSS) for emergency cardiac triage using non-invasive diagnostic indicators.</p>
+            </div>
+            <div class="card">
+                <div class="card-title">🔬 Benchmarking Scope</div>
+                <p>Evaluated <strong>8 Machine Learning algorithms</strong> across distinct mathematical families under rigorous 5-fold cross-validation:</p>
+                <ul>
+                    <li>Linear & Probabilistic (Logistic Regression, Naive Bayes)</li>
+                    <li>Distance & Instance-Based (KNN)</li>
+                    <li>Tree & Ensembles (Decision Tree, Random Forest, Gradient Boosting)</li>
+                    <li>Kernel & Neural (SVM RBF, Multi-Layer Perceptron)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Workflow & Architecture -->
+    <div class="slide-content" id="slide-4">
+        <h2>End-to-End Machine Learning Pipeline Workflow</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-title">1. Data Engineering</div>
+                <ul>
+                    <li>Median/Mode missing imputation</li>
+                    <li>99th percentile Winsorization (chol, trestbps)</li>
+                    <li>One-Hot dummy encoding (drop_first=True)</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-title">2. Splitting & Scaling</div>
+                <ul>
+                    <li>Stratified 80:20 Train-Test split</li>
+                    <li>StandardScaler fitted strictly on X_train</li>
+                    <li>Zero data leakage across folds</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-title">3. Optimization & Testing</div>
+                <ul>
+                    <li>GridSearchCV on Random Forest</li>
+                    <li>5-Fold Stratified Cross-Validation</li>
+                    <li>Comprehensive multi-metric evaluation</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 20px;">
+            <div class="card-title">⚡ Best Hyperparameters (Random Forest)</div>
+            <p><code>criterion: 'gini' | max_depth: 3 | min_samples_leaf: 2 | min_samples_split: 2 | n_estimators: 150</code></p>
+            <p><strong>Cross-Validation ROC-AUC:</strong> <span class="highlight">0.8979</span> (Generalization without overfitting)</p>
+        </div>
+    </div>
+
+    <!-- Slide 5: Multi-Model Benchmark Table -->
+    <div class="slide-content" id="slide-5">
+        <h2>Comparative Benchmark Across 8 ML Paradigms</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Family</th>
+                    <th>Accuracy</th>
+                    <th>Recall (Sensitivity)</th>
+                    <th>Precision</th>
+                    <th>F1-Score</th>
+                    <th>ROC-AUC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: rgba(16, 185, 129, 0.1);">
+                    <td><strong>KNN (k=7)</strong></td>
+                    <td>Distance-Based</td>
+                    <td class="highlight">93.44%</td>
+                    <td class="highlight">96.43%</td>
+                    <td>90.00%</td>
+                    <td>93.10%</td>
+                    <td><strong>0.9767</strong></td>
+                </tr>
+                <tr style="background: rgba(16, 185, 129, 0.1);">
+                    <td><strong>SVM (RBF Kernel)</strong></td>
+                    <td>Kernel Methods</td>
+                    <td class="highlight">93.44%</td>
+                    <td class="highlight">96.43%</td>
+                    <td>90.00%</td>
+                    <td>93.10%</td>
+                    <td><strong>0.9675</strong></td>
+                </tr>
+                <tr style="background: rgba(56, 189, 248, 0.1);">
+                    <td><strong>Random Forest (Tuned)</strong></td>
+                    <td>Ensemble (Bagging)</td>
+                    <td class="highlight">93.44%</td>
+                    <td>92.86%</td>
+                    <td class="highlight">92.86%</td>
+                    <td class="highlight">92.86%</td>
+                    <td><strong>0.9665</strong></td>
+                </tr>
+                <tr style="background: rgba(16, 185, 129, 0.1);">
+                    <td><strong>Naive Bayes (Gaussian)</strong></td>
+                    <td>Probabilistic</td>
+                    <td class="highlight">90.16%</td>
+                    <td class="highlight">96.43%</td>
+                    <td>84.38%</td>
+                    <td>90.00%</td>
+                    <td><strong>0.9643</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Logistic Regression</strong></td>
+                    <td>Linear Models</td>
+                    <td>85.25%</td>
+                    <td>89.29%</td>
+                    <td>80.65%</td>
+                    <td>84.75%</td>
+                    <td>0.9567</td>
+                </tr>
+                <tr>
+                    <td><strong>MLP (Neural Network)</strong></td>
+                    <td>Deep / Neural Net</td>
+                    <td>88.52%</td>
+                    <td>92.86%</td>
+                    <td>83.87%</td>
+                    <td>88.14%</td>
+                    <td>0.9491</td>
+                </tr>
+                <tr>
+                    <td><strong>Gradient Boosting</strong></td>
+                    <td>Ensemble (Boosting)</td>
+                    <td>88.52%</td>
+                    <td>89.29%</td>
+                    <td>86.21%</td>
+                    <td>87.72%</td>
+                    <td>0.9307</td>
+                </tr>
+                <tr>
+                    <td><strong>Decision Tree (CART)</strong></td>
+                    <td>Tree-Based</td>
+                    <td>78.69%</td>
+                    <td>78.57%</td>
+                    <td>75.86%</td>
+                    <td>77.19%</td>
+                    <td>0.8523</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Slide 6: Key Analytical Insights -->
+    <div class="slide-content" id="slide-6">
+        <h2>Key Inferences & Comparative Discussion</h2>
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">🎯 Clinical Sensitivity vs Accuracy</div>
+                <p>In medical triage, a <strong>False Negative</strong> is catastrophic (patient dies of untreated ischemia). KNN & SVM achieved <strong>96.43% Recall</strong> (only 1 false negative out of 28 cardiac cases).</p>
+            </div>
+            <div class="card">
+                <div class="card-title">🌲 Bagging vs Single Tree</div>
+                <p>Bagging 150 regularized trees in Random Forest reduced single-tree variance, elevating Recall from <strong>67.86%</strong> (Decision Tree) to <strong>92.86%</strong> and Accuracy from 80.33% to 93.44%.</p>
+            </div>
+            <div class="card">
+                <div class="card-title">🧠 Neural Networks on Small Data</div>
+                <p>MLP achieved 68.85% accuracy; deep neural nets require tens of thousands of samples to surpass regularized tree ensembles on tabular clinical features.</p>
+            </div>
+            <div class="card">
+                <div class="card-title">⚡ Top Clinical Biomarkers</div>
+                <p>Top 4 drivers of cardiovascular risk identified via Gini Importance: <strong>Fluoroscopy vessel count (`ca`)</strong>, <strong>Thallium defect (`thal`)</strong>, <strong>ST-depression (`oldpeak`)</strong>, and <strong>Max Heart Rate (`thalach`)</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Demonstration & Ethics -->
+    <div class="slide-content" id="slide-7">
+        <h2>Demonstration, Deployment & Ethics (PO8, PO10, PO12)</h2>
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">🖥️ Streamlit CDSS Web App</div>
+                <ul>
+                    <li>Real-time patient risk calculator with clinical sliders</li>
+                    <li>Runtime switching across all 8 benchmarked models</li>
+                    <li>Visual ROC curves, confusion matrices, and radar charts</li>
+                    <li>One-click export of structured diagnostic reports</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-title">🛡️ Ethical & Regulatory Governance</div>
+                <ul>
+                    <li><strong>Demographic Fairness:</strong> Calibrated thresholds for atypical CAD presentations in women</li>
+                    <li><strong>HIPAA/GDPR Compliance:</strong> Data de-identification prior to feature vectorization</li>
+                    <li><strong>Human-in-the-Loop:</strong> CDSS augments physician judgment, never prescribes autonomously</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 15px; text-align: center;">
+            <p style="font-size: 1.1rem; color: #38bdf8; font-weight: 600;">
+                All deliverables completed: Python ML Pipeline, Jupyter Notebook, Streamlit Web App, Academic Report, Peer-Assessed Quiz, and Presentation Deck.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer Controls -->
+    <div class="slide-footer">
+        <button class="nav-btn" id="prev-btn" onclick="prevSlide()" disabled>← Previous</button>
+        <div class="slide-counter" id="slide-counter">Slide 1 of 7</div>
+        <button class="nav-btn" id="next-btn" onclick="nextSlide()">Next →</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = 7;
+
+    function showSlide(index) {
+        for (let i = 1; i <= totalSlides; i++) {
+            const el = document.getElementById(`slide-${i}`);
+            if (el) el.classList.remove('active');
+        }
+        const target = document.getElementById(`slide-${index}`);
+        if (target) target.classList.add('active');
+
+        document.getElementById('slide-counter').textContent = `Slide ${index} of ${totalSlides}`;
+        document.getElementById('prev-btn').disabled = (index === 1);
+        document.getElementById('next-btn').disabled = (index === totalSlides);
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides) {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlide > 1) {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+    });
+</script>
+
+</body>
+</html>
