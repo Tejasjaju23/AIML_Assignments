@@ -4,7 +4,7 @@
 ### DEPARTMENT OF COMPUTER ENGINEERING | ACADEMIC YEAR: 2026–2027
 ### THIRD YEAR B.TECH (SEMESTER - V) | COURSE CODE: 2304322T
 ### COURSE: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
-## ACTIVITY NO. 2: Implementation and Performance Evaluation with Comparative Analysis of Machine Learning Models for Selected Real-Time Applications
+## ACTIVITY NO. 1: Implementation and Performance Evaluation with Comparative Analysis of Machine Learning Models for Selected Real-Time Applications
 
 ---
 
