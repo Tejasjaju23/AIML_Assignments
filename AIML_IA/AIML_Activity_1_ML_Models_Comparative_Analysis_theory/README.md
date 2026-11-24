@@ -1,4 +1,4 @@
-# 🫀 CardioGuard AI: Multi-Algorithm Machine Learning Pipeline for Cardiovascular Disease Risk Prediction
+#  CardioGuard AI: Multi-Algorithm Machine Learning Pipeline for Cardiovascular Disease Risk Prediction
 
 ### MIT ACADEMY OF ENGINEERING, ALANDI (D), PUNE
 ### DEPARTMENT OF COMPUTER ENGINEERING | ACADEMIC YEAR: 2026–2027
@@ -8,7 +8,7 @@
 
 ---
 
-## 📌 Executive Summary
+##  Executive Summary
 **CardioGuard AI** is an enterprise-grade Clinical Decision Support System (CDSS) for non-invasive risk stratification of Coronary Artery Disease (CAD). Utilizing the UCI Cleveland Clinic Foundation benchmark dataset, this project implements the complete end-to-end Machine Learning software development lifecycle and provides an exhaustive comparative benchmark across **8 core Machine Learning algorithms spanning 7 paradigms**:
 1. **Logistic Regression** (Linear Models)
 2. **Gaussian Naive Bayes** (Probabilistic Models)
@@ -21,7 +21,7 @@
 
 ---
 
-## 🏆 Key Benchmark Results (Test Cohort N=61)
+##  Key Benchmark Results (Test Cohort N=61)
 
 | Model Name | Family / Paradigm | Accuracy (%) | Recall (Sensitivity) (%) | Precision (%) | F1-Score (%) | ROC-AUC | Inference Latency (ms) |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -36,7 +36,7 @@
 
 ---
 
-## 📂 Project Repository Structure
+##  Project Repository Structure
 ```
 AIML_Mini_Project-main/
 │
@@ -81,7 +81,7 @@ AIML_Mini_Project-main/
 
 ---
 
-## 🚀 Execution & Quick Start Guide (Windows PowerShell)
+##  Execution & Quick Start Guide (Windows PowerShell)
 
 ### 1. Set Up Virtual Environment (Recommended)
 Open Windows PowerShell inside the project directory:
@@ -133,7 +133,7 @@ Creates `AIML_Activity_2_ML_Models_Comparative_Analysis.zip` ready for Moodle an
 
 ---
 
-## 🔧 Technical Troubleshooting & Architecture Notes
+##  Technical Troubleshooting & Architecture Notes
 
 ### Resolving `ModuleNotFoundError: No module named '_loss'`
 If running `app.py` or `joblib.load('all_models.joblib')` previously threw `ModuleNotFoundError: No module named '_loss'`, this issue has been comprehensively resolved with multi-layered architectural safeguards:
