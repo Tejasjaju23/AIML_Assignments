@@ -2,7 +2,7 @@
 
 ### MIT ACADEMY OF ENGINEERING, ALANDI (D), PUNE
 ### DEPARTMENT OF COMPUTER ENGINEERING | ACADEMIC YEAR: 2026–2027
-### THIRD YEAR B.TECH (SEMESTER - V) | COURSE CODE: 2304322T
+### THIRD YEAR B.TECH (SEMESTER - V) 
 ### COURSE: ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
 ## ACTIVITY NO. 1: Implementation and Performance Evaluation with Comparative Analysis of Machine Learning Models for Selected Real-Time Applications
 
