@@ -1,8 +1,7 @@
-# AIML Practical Assignment 5: Ensemble Learning and Performance Evaluation
-
+# AIML Practical Assignment 5
 **Course:** Artificial Intelligence and Machine Learning (AIML)  
 **Academic Practical:** Practical Assignment 5  
-**Institution:** Department of Artificial Intelligence and Machine Learning  
+  
 
 ---
 
@@ -14,8 +13,6 @@
 | **PRN** | 202401040124 |
 | **Roll Number** | 29 |
 | **Batch** | A2 |
-| **Academic Term** | 2025–2026 |
-| **Repository Path** | `AIML_Practical_5_Tejas_Jaju/` |
 
 ---
 
